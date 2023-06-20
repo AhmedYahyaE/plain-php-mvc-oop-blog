@@ -1,0 +1,25 @@
+# If the mod_rewrite module is enabled (in the central Apache configuration file "httpd.conf")
+<IfModule mod_rewrite.c>
+    # Enable the mod_rewrite engine, allowing URL rewriting rules to take effect
+    RewriteEngine On
+
+    # Allow the server to follow symbolic links, Prevent Indexing (i.e. directory listing)
+	Options +FollowSymLinks -Indexes
+
+    # Handle Front Controller...
+    # The rewrite conditions (the conditions when rewrite rule are required to be activated)
+    # These rewrite conditions ensure that the rewrite rule is only applied if the requested URL does not correspond to an existing directory or file
+    # If the requested filename is not a directory (!-d)
+    RewriteCond %{REQUEST_FILENAME} !-d
+    # If the requested filename is not a regular file (!-f)
+    RewriteCond %{REQUEST_FILENAME} !-f
+
+    # Then, the rewrite rule is
+
+    # The rewrite rule
+    RewriteRule ^(.*)$ index.php [QSA,L]
+    # The [QSA] flag stands for "Query String Append." When this flag is used in a RewriteRule, it instructs Apache to append the existing query string from the original URL to the rewritten URL. The [L] flag indicates that this is the last rule to process if the conditions are met.
+
+    #    ^(.*)$    Regular Expression. ^ is a metacharacter that denotes the start of a string or line. $ is a metacharacter that denotes the end of a string or line. () is a capturing group that captures the matched sequence of characters. . matches any single character except for a newline character. * is a quantifier that matches zero or more occurrences of the preceding element (in this case, .). Combining these elements,    ^(.*)$    will match any sequence of characters from the beginning (^) to the end ($) of a string and capture it within the parentheses. It effectively captures the entire input string.
+    # Summary: If the requested URL doesn't correspond to an existing directory or file, redirect all requests (anything) to 'index.php'. Also, prevent directory indexing and allow the server to follow symbolic links.
+</IfModule>
