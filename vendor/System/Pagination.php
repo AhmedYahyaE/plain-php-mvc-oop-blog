@@ -1,7 +1,6 @@
 <?php
+
 namespace System;
-
-
 
 class Pagination
 {

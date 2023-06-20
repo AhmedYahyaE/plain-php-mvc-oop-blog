@@ -143,21 +143,21 @@ class Database
      */
      private function connect()
      {
-        $connectionData = $this->app->file->call('config.php'); // Check config.php file for the database credentials/configuration
+         $connectionData = $this->app->file->call('config.php');
 
-        extract($connectionData);
+         extract($connectionData);
 
-        try {
-            static::$connection = new PDO('mysql:host=' . $server . ';dbname=' . $dbname, $dbuser, $dbpass); // $server, $dbname, $dbuser and $dbpass come from the config.php file, and those variables are available due to the use of the extract() PHP function
+         try {
+             static::$connection = new PDO('mysql:host=' . $server . ';dbname=' . $dbname, $dbuser, $dbpass);
 
-            static::$connection->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+             static::$connection->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
 
-            static::$connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+             static::$connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
             static::$connection->exec('SET NAMES utf8');
-        } catch (PDOException $e) {
-            die($e->getMessage());
-        }
+         } catch (PDOException $e) {
+             die($e->getMessage());
+         }
      }
 
      /**
@@ -167,7 +167,7 @@ class Database
      */
      public function connection()
      {
-        return static::$connection;
+         return static::$connection;
      }
 
      /**

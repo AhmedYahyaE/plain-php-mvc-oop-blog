@@ -56,27 +56,23 @@ class Application
      */
     public function run()
     {
-        $this->session->start(); // N.B. Non-existing property. Check __get() Magic Method
+        $this->session->start();
 
-        $this->request->prepareUrl(); // N.B. Non-existing property. Check __get() Magic Method
+        $this->request->prepareUrl();
 
-        $this->file->call('App/index.php'); // N.B. Non-existing property. Check __get() Magic Method
+        $this->file->call('App/index.php');
 
-        list($controller, $method, $arguments) = $this->route->getProperRoute(); // N.B. Non-existing property. Check __get() Magic Method
+        list($controller, $method, $arguments) = $this->route->getProperRoute();
 
         if ($this->route->hasCallsFirst()) {
             $this->route->callFirstCalls();
         }
 
-        $output = (string) $this->load->action($controller, $method, $arguments); // N.B. Non-existing property. Check __get() Magic Method
-        /* echo '<pre>', var_dump($output), '</pre>';
-        exit; */
+        $output = (string) $this->load->action($controller, $method, $arguments);
 
-        // echo '<pre>', var_dump($this->response), '</pre>';
+        $this->response->setOutput($output);
 
-        $this->response->setOutput($output); // N.B. Non-existing property. Check __get() Magic Method
-
-        $this->response->send(); // N.B. Non-existing property. Check __get() Magic Method
+        $this->response->send();
     }
 
      /**
@@ -116,18 +112,7 @@ class Application
      */
     private function loadHelpers()
     {
-        $this->file->call('vendor/helpers.php'); // N.B. Non-existing property. Check __get() Magic Method
-    }
-
-    /**
-    * Get shared value dynamically
-    *
-    * @param string $key
-    * @return mixed
-    */
-    public function __get($key)
-    {
-        return $this->get($key);
+        $this->file->call('vendor/helpers.php');
     }
 
      /**
@@ -212,19 +197,29 @@ class Application
    private function coreClasses()
    {
        return [
-            'request'    => 'System\\Http\\Request',
-            'response'   => 'System\\Http\\Response',
-            'session'    => 'System\\Session',
-            'route'      => 'System\\Route',
-            'cookie'     => 'System\\Cookie',
-            'load'       => 'System\\Loader',
-            'html'       => 'System\\Html',
-            'db'         => 'System\\Database',
-            'view'       => 'System\\View\\ViewFactory',
-            'url'        => 'System\\Url',
-            'validator'  => 'System\\Validation',
-            'pagination' => 'System\\Pagination',
+            'request'       => 'System\\Http\\Request',
+            'response'      => 'System\\Http\\Response',
+            'session'       => 'System\\Session',
+            'route'         => 'System\\Route',
+            'cookie'        => 'System\\Cookie',
+            'load'          => 'System\\Loader',
+            'html'          => 'System\\Html',
+            'db'            => 'System\\Database',
+            'view'          => 'System\\View\\ViewFactory',
+            'url'           => 'System\\Url',
+            'validator'     => 'System\\Validation',
+            'pagination'    => 'System\\Pagination',
        ];
    }
 
+    /**
+    * Get shared value dynamically
+    *
+    * @param string $key
+    * @return mixed
+    */
+   public function __get($key)
+   {
+       return $this->get($key);
+   }
 }

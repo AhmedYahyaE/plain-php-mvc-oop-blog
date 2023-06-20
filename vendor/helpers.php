@@ -1,7 +1,6 @@
 <?php
+
 use System\Application;
-
-
 
 if (! function_exists('pre')) {
      /**
@@ -18,8 +17,6 @@ if (! function_exists('pre')) {
     }
 }
 
-
-
 if (! function_exists('pred')) {
      /**
      * Visualize the given variable in browser and exit the application
@@ -33,8 +30,6 @@ if (! function_exists('pred')) {
         die;
     }
 }
-
-
 
 if (! function_exists('array_get')) {
      /**
@@ -51,8 +46,6 @@ if (! function_exists('array_get')) {
     }
 }
 
-
-
 if (! function_exists('_e')) {
      /**
      * Escape the given value
@@ -65,8 +58,6 @@ if (! function_exists('_e')) {
         return htmlspecialchars($value);
     }
 }
-
-
 
 if (! function_exists('assets')) {
      /**
@@ -83,8 +74,6 @@ if (! function_exists('assets')) {
     }
 }
 
-
-
 if (! function_exists('url')) {
      /**
      * Generate full path for the given path
@@ -99,8 +88,6 @@ if (! function_exists('url')) {
         return $app->url->link($path);
     }
 }
-
-
 
 if (! function_exists('read_more')) {
     /**
@@ -130,8 +117,6 @@ if (! function_exists('read_more')) {
     }
 }
 
-
-
 if (! function_exists('seo')) {
      /**
      * Remove any unwanted characters from the given string
@@ -159,5 +144,4 @@ if (! function_exists('seo')) {
         // and trim any dashes
         return trim(strtolower($string), '-');
     }
-
 }

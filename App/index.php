@@ -1,4 +1,6 @@
 <?php
+// Entry Point / Entry Script file
+
 
 // white list routes
 
@@ -32,10 +34,6 @@ if (strpos($app->request->url(), '/admin') === 0 ) {
         return $settingsModel;
     });
 }
-
-
-
-// Application Routes
 
 // Admin Routes                 
 $app->route->add('/admin/login', 'Admin/Login');

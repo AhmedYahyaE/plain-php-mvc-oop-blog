@@ -4,7 +4,7 @@
     <!-- Footer -->
     <footer>
         <div class="copyrights">
-            &copy;2021 My Blog All Rights Reserved
+            &copy;2016 My Blog All Rights Reserved
         </div>
         <div class="social">
             <a href="#" class="facebook">
