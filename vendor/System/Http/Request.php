@@ -40,7 +40,8 @@ class Request
             list($requestUri, $queryString) = explode('?' , $requestUri);
         }
 
-        $this->url = rtrim(preg_replace('#^'.$script.'#', '' , $requestUri), '/');
+        // $this->url = rtrim(preg_replace('#^'.$script.'#', '' , $requestUri), '/');
+        isset($this->url) ? $this->url = rtrim(preg_replace('#^'.$script.'#', '' , $requestUri), '/') : false;
 
         if (! $this->url) {
             $this->url = '/';
