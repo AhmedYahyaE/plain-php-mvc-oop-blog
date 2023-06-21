@@ -1,5 +1,5 @@
 <?php
-// Entry Point / Entry Script file
+// Entry Point / Entry Script file (for bootstrapping the application)
 
 
 date_default_timezone_set('Africa/Cairo');
