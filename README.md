@@ -4,43 +4,58 @@ A plain PHP and MySQL advanced blog application which follows the MVC Design Pat
 Frontend technologies used: jQuery and Bootstrap (Responsive Design/Mobile First Design).
 
 ## Screenshots:
-***Blog post***
+
+***Blog post:***
+
 ![blog-post](https://github.com/AhmedYahyaE/plain-php-mvc-oop-blog/assets/118033266/561f5609-39f6-4f8d-b5df-e3c2e86b99df)
 
 ## Features:
-1- User Registration, Authentication and Authorization.
+1- MVC design pattern, Routing System, Service Container, Middlewares, Pagination Class, Entry Point/Script file (index.php) for the whole application, ...
 
-2- Both Server-side and Client-side Validation.
+2- User Registration, Authentication and Authorization.
 
 3- Login System (Session Management).
 
-4- CRUD Operations.
+4- Both Server-side and Client-side Validation.
 
-5- Admin Panel for the website owner (interactive Dashboard, user registration approval, member commemt approval, item and category approval, ...).
+5- Admin Panel for managing blog users, posts and comments.
 
-6- User Roles and Permissions.
+6- User profile management.
 
-7- File Upload.
+7- Create, update, and delete blog posts.
+
+8- Categories and tags for organizing blog posts. Also, commenting system for blog posts.
+
+9- CRUD Operations.
+
+10- User Roles and Permissions.
+
+11- File Upload.
+
+12- Responsive / Mobile first Design.
 
 ## Application URLs:
-1- Frontend: The public-facing website can be accessed at https://www.domain-example.com/index.php. This is where customers/users/members can browse products/items, add items to their cart, and comment on existing products, ...
+1- Frontend: The public-facing website can be accessed at https://www.your-domain-example.com/. This is where regular customers/users/members can view/read blog posts, add posts, comment on them, and interact with the website, .... The frontend URL is typically accessible to all visitors of the website. Replace https://www.your-domain-example.com/ with the actual domain name or localhost address where you have deployed the application.
 
-2- Admin Panel: The Admin Panel for managing the E-commerce website is available at https://www.domain-example.com/admin/index.php. This is a secure area accessible only to authorized administrators. It provides functionalities for managing products/items, categories, orders, and user accounts and comments.
+2- Admin Panel: The Admin Panel for managing the blog is available at https://www.your-domain-example.com/admin/login or https://www.your-domain-example.com/admin. This is a secure area accessible only to authorized administrators. It provides access to the administrative functionalities of the blog application. It is designed for authorized users with administrative privileges to manage the blog posts, comments, and user accounts. Only authenticated administrators can access the admin panel. The Admin Panel URL is protected and restricted to a specific set of users. Again, make sure to replace https://www.your-domain-example.com/ with the appropriate domain name or localhost address.
+
+## Application Routes:
+All the application routes are defined in the [Application Routes](App/index.php) file.
 
 ## Installation & Configuration:
 1- Clone the project or download it.
 
-2- Create a MySQL database named **\`shop\`** and import the database schema from [shop database - PhpMyAdmin Export.sql](<Database - shop/shop database - PhpMyAdmin Export.sql>) SQL Dump file. Navigate to '**`Database - shop`**/**`shop database - PhpMyAdmin Export.sql`**' SQL Dump file.
+2- Create a MySQL database named **\`blog\`** and import the database schema from [blog database - PhpMyAdmin Export.sql](<Database - blog/blog database - SQL Dump File - PhpMyAdmin Export.sql>) SQL Dump file. Navigate to '**`Database - blog`**/**`blog database - SQL Dump File - PhpMyAdmin Export.sql`**' SQL Dump file.
 
-3- Navigate to the database connection configuration file in '**`admin/connect.php`**' file and configure/edit the file according to your MySQL credentials.
+3- Navigate to the database connection configuration file in '**`config.php`**' file and configure/edit/update the file with your MySQL database credentials and other configuration settings.
 
 4- Navigate to the project root directory by using the **`cd`** terminal command, and then start your PHP built-in Development Web Server by running the command: **`php -S localhost:8000`**.
 
-5- In your browser, go to http://localhost:8000/index.php (**Frontend**) and http://localhost:8000/admin/index.php (**Admin Panel**).
+5- In your browser, go to http://localhost:8000/ (**Frontend**) and http://localhost:8000/admin or http://localhost:8000/admin/login (**Admin Panel**).
 
-6- A ready-to-use registered user account credentials (for both **Frontend** and **Admin Panel**):
+6- A ready-to-use registered user account credentials is (for both **Frontend** and **Admin Panel**):
 
-> **Username**: **Ahmed**, **Password**: **123456**
+> **Email**: **ahmed.yahya@gmail.com**, **Password**: **123456**
 
 ## Contribution:
 Contributions to my plain PHP/MySQL E-commerce application are most welcome! If you find any issues or have suggestions for improvements or want to add new features, please open an issue or submit a pull request.
