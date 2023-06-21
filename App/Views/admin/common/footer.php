@@ -2,7 +2,7 @@
     <div class="pull-right hidden-xs">
       <b>Version</b> 2.3.3
     </div>
-    <strong>Copyright &copy; 2016 <a href="../http://www.aymanelash.com">Ayman Elash</a>.</strong> All rights
+    <strong>Copyright &copy; 2021 <a href="../http://www.aymanelash.com">Ayman Elash</a>.</strong> All rights
     reserved.
   </footer>
 </div>
