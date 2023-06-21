@@ -16,12 +16,12 @@ class LoginController extends Controller
         $loginModel = $this->load->model('Login');
 
         if ($loginModel->isLogged()) {
-            return $this->url->redirectTo('/admin');
+            return $this->url->redirectTo('/admin'); // if the user is already authenticated/logged-in, redirect them to the DashboardController.php (dashboard.php page)
         }
 
         $data['errors'] = $this->errors;
 
-        return $this->view->render('admin/users/login', $data);
+        return $this->view->render('admin/users/login', $data); //    $this->view    is a non-existing property which will be accessed using __get() Magic Method in the parent Controller.php Class, which, in turn, will call get() method in Application.php Class, which will call coreClasses() method which will call render() method in ViewFactory.php Class, which returns a View.php class object
     }
 
     /**
@@ -49,6 +49,9 @@ class LoginController extends Controller
             $json['success']  = 'Welcome Back ' . $loggedInUser->first_name;
 
             $json['redirect'] = $this->url->link('/admin');
+
+            // echo '<pre>', var_dump($this->json($json)), '</pre>';
+            // exit;
 
             return $this->json($json);
         } else {

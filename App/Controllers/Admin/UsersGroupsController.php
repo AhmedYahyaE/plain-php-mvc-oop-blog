@@ -19,7 +19,7 @@ class UsersGroupsController extends Controller
 
         $data['success'] = $this->session->has('success') ? $this->session->pull('success') : null;
 
-        $view = $this->view->render('admin/users-groups/list', $data);
+        $view = $this->view->render('admin/users-groups/list', $data); //    $this->view    is a non-existing property which will be accessed using __get() Magic Method in the parent Controller.php Class, which, in turn, will call get() method in Application.php Class, which will call coreClasses() method which will call render() method in ViewFactory.php Class, which returns a View.php class object
 
         return $this->adminLayout->render($view);
     }
@@ -108,7 +108,7 @@ class UsersGroupsController extends Controller
 
         $data['pages'] = $this->getPermissionPages();
 
-        return $this->view->render('admin/users-groups/form', $data);
+        return $this->view->render('admin/users-groups/form', $data); //    $this->view    is a non-existing property which will be accessed using __get() Magic Method in the parent Controller.php Class, which, in turn, will call get() method in Application.php Class, which will call coreClasses() method which will call render() method in ViewFactory.php Class, which returns a View.php class object
     }
 
      /**

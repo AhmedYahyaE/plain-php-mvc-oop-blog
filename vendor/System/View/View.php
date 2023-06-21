@@ -81,14 +81,14 @@ class View implements ViewInterface
     /**
     * {@inheritDoc}
     */
-    public function getOutput()
+    public function getOutput() // This method is called when a View.php object is treated like a string (e.g. Type Casting (string)), through the use of the __toString() Magic Method. Check the __toString() Magic Method here inside the same Class
     {
         if (is_null($this->output)) {
             ob_start();
 
             extract($this->data);
 
-            require $this->viewPath;
+            require $this->viewPath; // 'include' the view file
 
             $this->output = ob_get_clean();
         }
@@ -99,7 +99,7 @@ class View implements ViewInterface
     /**
     * {@inheritDoc}
     */
-    public function __toString()
+    public function __toString() // Type Casting (string) with the variable $output inside run() method in Application.php Class triggers the __toString() Magic Method
     {
         return $this->getOutput();
     }

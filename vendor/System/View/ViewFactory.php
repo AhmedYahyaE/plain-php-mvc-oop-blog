@@ -32,6 +32,6 @@ class ViewFactory
     */
     public function render($viewPath, array $data = [])
     {
-        return new View($this->app->file, $viewPath, $data);
+        return new View($this->app->file, $viewPath, $data); // returns a View.php Class object
     }
 }

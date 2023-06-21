@@ -1,4 +1,6 @@
 <?php
+// Entry Point / Entry Script file
+
 
 date_default_timezone_set('Africa/Cairo');
 

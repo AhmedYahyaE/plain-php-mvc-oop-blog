@@ -48,7 +48,7 @@ class Loader
     {
         $object = $this->controller($controller);
 
-        return call_user_func_array([$object, $method], $arguments);
+        return call_user_func_array([$object, $method], $arguments); // A View.php Class object is returned (the ViewFactory.php Class returns the View.php Class object)
     }
 
      /**

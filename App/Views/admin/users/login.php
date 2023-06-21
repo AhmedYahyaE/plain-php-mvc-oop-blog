@@ -107,6 +107,8 @@
                 loginResults.removeClass().addClass('alert alert-info').html('Logging...');
             },
             success: function (results) {
+				// console.log(results);
+
                 if (results.errors) {
                     loginResults.removeClass().addClass('alert alert-danger').html(results.errors);
                     $('button').removeAttr('disabled');
@@ -115,7 +117,11 @@
                     loginResults.removeClass().addClass('alert alert-success').html(results.success);
 
                     if (results.redirect) {
-                        window.location.href = results.redirect;
+                        // window.location.href = results.redirect;
+
+						setTimeout(() => { // Arrow Function Syntax
+							window.location.href = results.redirect;
+						}, 2000);
                     }
                 }
             }

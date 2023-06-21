@@ -68,7 +68,10 @@ class Application
             $this->route->callFirstCalls();
         }
 
-        $output = (string) $this->load->action($controller, $method, $arguments);
+        $output = (string) $this->load->action($controller, $method, $arguments); //    $this->load->action($controller, $method, $arguments);    (WITHOUT the Type Casting (string)) results in a View.php class object, and treating that object like a string using Type Casting (string), we get the whole output as string thanks to the __toString() Magic Method in View.php Class. Note: Check the action() method in Loader.php Class which calls the render() method of the ViewFactory.php Class (    $this->view->render    calls the the render() method of the ViewFactory.php Class by accessing that class through the __get() Magic Method of the parent class, which, in turn, calls the ViewFactory.php class from the coreClasses() method inside here in Application.php Class)
+        // echo '<pre>', var_dump($this->load->action($controller, $method, $arguments)), '</pre>'; //    $this->load->action($controller, $method, $arguments);    (WITHOUT the Type Casting (string)) results in a View.php class object, and treating that object like a string using Type Casting (string), we get the whole output as string thanks to the __toString() Magic Method in View.php Class. Note: Check the action() method in Loader.php Class which calls the render() method of the ViewFactory.php Class (    $this->view->render    calls the the render() method of the ViewFactory.php Class by accessing that class through the __get() Magic Method of the parent class, which, in turn, calls the ViewFactory.php class from the coreClasses() method inside here in Application.php Class)
+        // echo '<pre>', var_dump($output), '</pre>'; // Using Type Casting (string) to trigger the __toString() Magic Method in View.php Class
+        // exit;
 
         $this->response->setOutput($output);
 
@@ -205,7 +208,7 @@ class Application
             'load'          => 'System\\Loader',
             'html'          => 'System\\Html',
             'db'            => 'System\\Database',
-            'view'          => 'System\\View\\ViewFactory',
+            'view'          => 'System\\View\\ViewFactory', // ViewFactory.php Class returns View.php Class objects through the ViewFactory.php Class's render() method
             'url'           => 'System\\Url',
             'validator'     => 'System\\Validation',
             'pagination'    => 'System\\Pagination',

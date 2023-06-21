@@ -1,13 +1,12 @@
 <?php
-// Entry Point / Entry Script file
-
-
+// Application Routes
 // white list routes
 
 use System\Application;
 
 $app = Application::getInstance();
 
+// If the URL contains '/admin' which means the user is trying to access the Admin Panel, call index() method in AccessController.php Class
 if (strpos($app->request->url(), '/admin') === 0 ) {
     // check if the current url started with /admin
     // if so, then call our middlewares
@@ -35,13 +34,17 @@ if (strpos($app->request->url(), '/admin') === 0 ) {
     });
 }
 
+
+
+// Application Routes
+
 // Admin Routes                 
-$app->route->add('/admin/login', 'Admin/Login');
+$app->route->add('/admin/login', 'Admin/Login'); // if the user is already authenticated/logged-in, redirect them to the DashboardController.php (dashboard.php page) (by the index() method in LoginController.php Class)
 $app->route->add('/admin/login/submit', 'Admin/Login@submit', 'POST');
 
 
 // dashboard
-$app->route->add('/admin' , 'Admin/Dashboard');
+$app->route->add('/admin' , 'Admin/Dashboard'); // If the user is unauthenticated/not logged-in/guest, they get redirected to '/admin/login' page (by the index() method in AccessController.php)
 $app->route->add('/admin/dashboard' , 'Admin/Dashboard');
 $app->route->add('/admin/submit' , 'Admin/Dashboard@submit', 'POST');
 

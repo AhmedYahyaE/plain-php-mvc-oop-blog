@@ -84,7 +84,8 @@ class Request
         if (is_array($value)) {
             $value = array_filter($value);
         } else {
-            $value = trim($value);
+            // $value = trim($value);
+            isset($value) ? $value = trim($value) : null;
         }
 
         return $value;

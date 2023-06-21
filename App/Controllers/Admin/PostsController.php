@@ -19,7 +19,7 @@ class PostsController extends Controller
 
         $data['success'] = $this->session->has('success') ? $this->session->pull('success') : null;
 
-        $view = $this->view->render('admin/posts/list', $data);
+        $view = $this->view->render('admin/posts/list', $data); //    $this->view    is a non-existing property which will be accessed using __get() Magic Method in the parent Controller.php Class, which, in turn, will call get() method in Application.php Class, which will call coreClasses() method which will call render() method in ViewFactory.php Class, which returns a View.php class object
 
         return $this->adminLayout->render($view);
     }
@@ -126,7 +126,7 @@ class PostsController extends Controller
 
         $data['posts'] = $this->load->model('Posts')->all();
 
-        return $this->view->render('admin/posts/form', $data);
+        return $this->view->render('admin/posts/form', $data); //    $this->view    is a non-existing property which will be accessed using __get() Magic Method in the parent Controller.php Class, which, in turn, will call get() method in Application.php Class, which will call coreClasses() method which will call render() method in ViewFactory.php Class, which returns a View.php class object
     }
 
     /**

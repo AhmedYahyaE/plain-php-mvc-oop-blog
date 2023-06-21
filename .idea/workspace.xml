@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f8ae369a-39b3-4f8c-82c0-ba3bc6fbfc03" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/App/Controllers/Admin/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controllers/Admin/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Views/admin/users/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/admin/users/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/System/Application.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/System/Application.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/System/Http/Request.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/System/Http/Request.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/System/Route.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/System/Route.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/System/View/View.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/System/View/View.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\PHP\php.exe" />
+  <component name="ProjectId" id="2RUxtNEwiZlDClrfzSETve61aQM" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f8ae369a-39b3-4f8c-82c0-ba3bc6fbfc03" name="Changes" comment="" />
+      <created>1687318684315</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1687318684315</updated>
+      <workItem from="1687318733268" duration="97000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

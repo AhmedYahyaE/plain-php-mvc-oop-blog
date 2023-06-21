@@ -29,7 +29,7 @@ class SettingsController extends Controller
         $data['site_status'] = $this->request->post('site_status') ?: $settingsModel->get('site_status');
         $data['site_close_msg'] = $this->request->post('site_close_msg') ?: $settingsModel->get('site_close_msg');
 
-        $view = $this->view->render('admin/settings/form', $data);
+        $view = $this->view->render('admin/settings/form', $data); //    $this->view    is a non-existing property which will be accessed using __get() Magic Method in the parent Controller.php Class, which, in turn, will call get() method in Application.php Class, which will call coreClasses() method which will call render() method in ViewFactory.php Class, which returns a View.php class object
 
         return $this->adminLayout->render($view);
     }
