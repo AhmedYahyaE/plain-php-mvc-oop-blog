@@ -1,7 +1,7 @@
 # Plain PHP and MySQL MVC Pattern OOP Advanced CMS Blog Application/System
 A plain PHP and MySQL advanced blog application which follows the MVC Design Pattern (Model-View-Controller Architecture) (Separation of Concerns), and is completely Object-oriented (OOP). This project script is written entirely in plain PHP and aims to demonstrate the implementation of a blog system without relying on any external libraries or frameworks.
 
-Frontend technologies used: jQuery and Bootstrap (Responsive Design/Mobile First Design).
+Frontend technologies used: jQuery, JavaScript, AJAX and Bootstrap (Responsive Design/Mobile First Design).
 
 ## Screenshots:
 
