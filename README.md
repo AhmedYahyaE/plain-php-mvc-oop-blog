@@ -51,7 +51,7 @@ All the application routes are defined in the [Application Routes](App/index.php
 
 4- Navigate to the project root directory by using the **`cd`** terminal command, and then start your PHP built-in Development Web Server by running the command: **`php -S localhost:8000`**.
 
-5- In your browser, go to http://localhost:8000/ (**Frontend**) and http://localhost:8000/admin or http://localhost:8000/admin/login (**Admin Panel**).
+5- In your browser, go to http://localhost:8000/ (**Frontend**) and http://localhost:8000/admin or http://localhost:8000/admin/login (**Admin Panel**). N.B. All the application routes are defined in the [Application Routes](App/index.php) file.
 
 6- A ready-to-use registered user account credentials is (for both **Frontend** and **Admin Panel**):
 
