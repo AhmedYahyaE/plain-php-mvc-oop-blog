@@ -1,5 +1,5 @@
 # Plain PHP and MySQL MVC Pattern OOP Advanced CMS Blog Application/System
-A plain PHP and MySQL advanced blog application which follows the MVC Design Pattern (Model-View-Controller Architecture) (Separation of Concerns), and is completely Object-oriented (OOP). This project script is written entirely in plain PHP and aims to demonstrate the implementation of a blog system without relying on any external libraries or frameworks.
+A plain PHP and MySQL advanced blog application which follows the MVC Design Pattern (Model-View-Controller Architecture i.e. Separation of Concerns), and is completely Object-oriented (OOP). This project script is written entirely in plain PHP and aims to demonstrate the implementation of a blog system without relying on any external libraries or frameworks.
 
 Frontend technologies used: jQuery, JavaScript, AJAX and Bootstrap (Responsive Design/Mobile First Design).
 
@@ -53,9 +53,9 @@ All the application routes are defined in the [Application Routes](App/index.php
 
 5- In your browser, go to http://localhost:8000/ (**Frontend**) and http://localhost:8000/admin or http://localhost:8000/admin/login (**Admin Panel**). N.B. All the application routes are defined in the [Application Routes](App/index.php) file.
 
-6- A ready-to-use registered user account credentials is (for both **Frontend** and **Admin Panel**):
+6- Here are the ready-to-use registered user account credentials you can readily use is (for both **Frontend** and **Admin Panel**):
 
 > **Email**: **ahmed.yahya@gmail.com**, **Password**: **123456**
 
 ## Contribution:
-Contributions to my plain PHP/MySQL E-commerce application are most welcome! If you find any issues or have suggestions for improvements or want to add new features, please open an issue or submit a pull request.
+Contributions to my plain PHP/MySQL MVC OOP application are most welcome! If you find any issues or have suggestions for improvements or want to add new features, please open an issue or submit a pull request.
