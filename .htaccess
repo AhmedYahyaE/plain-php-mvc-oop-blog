@@ -14,7 +14,7 @@
     # If the requested filename is not a regular file (!-f)
     RewriteCond %{REQUEST_FILENAME} !-f
 
-    # Then, the rewrite rule is
+    # Then, the rewrite rule is:
 
     # The rewrite rule
     RewriteRule ^(.*)$ index.php [QSA,L]
