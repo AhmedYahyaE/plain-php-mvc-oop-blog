@@ -58,4 +58,4 @@ All the application routes are defined in the [Application Routes](App/index.php
 > **Email**: **ahmed.yahya@gmail.com**, **Password**: **123456**
 
 ## Contribution:
-Contributions to my plain PHP/MySQL MVC OOP blog application are most welcome! If you find any issues or have suggestions for improvements or want to add new features, please open an issue or submit a pull request.
+Contributions to my plain PHP/MySQL MVC OOP Blog application are most welcome! If you find any issues or have suggestions for improvements or want to add new features, please open an issue or submit a pull request.
