@@ -55,7 +55,12 @@ if (! function_exists('_e')) {
      */
     function _e($value)
     {
-        return htmlspecialchars($value);
+        // Fixed issue upon user Sign Up form submission
+        if ($value != null) {
+            return htmlspecialchars($value);
+        }
+
+        // return htmlspecialchars($value);
     }
 }
 

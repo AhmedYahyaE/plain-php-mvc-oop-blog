@@ -45,7 +45,7 @@ class UsersModel extends Model
              ->data('password', password_hash($this->request->post('password'), PASSWORD_DEFAULT))
              ->data('status', $this->request->post('status'))
              ->data('gender', $this->request->post('gender'))
-             ->data('birthday', strtotime($this->request->post('birthday')))
+            //  ->data('birthday', strtotime($this->request->post('birthday')))
              ->data('ip', $this->request->server('REMOTE_ADDR'))
              ->data('created', $now = time())
              ->data('code', sha1($now . mt_rand()))

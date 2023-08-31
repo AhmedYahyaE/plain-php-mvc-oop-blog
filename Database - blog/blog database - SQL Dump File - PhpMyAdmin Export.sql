@@ -205,9 +205,9 @@ CREATE TABLE `users` (
   `password` varchar(128) NOT NULL,
   `image` varchar(255) NOT NULL,
   `gender` varchar(6) NOT NULL,
-  `birthday` int NOT NULL,
+  `birthday` int,
   `created` int NOT NULL,
-  `status` varchar(20) NOT NULL,
+  `status` varchar(20),
   `ip` varchar(32) NOT NULL,
   `code` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;

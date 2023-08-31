@@ -71,6 +71,8 @@ $(function () {
                 formResults.removeClass().addClass('alert alert-info').html('Loading...');
             },
             success: function(results) {
+                // console.log(results);
+
                 if (results.errors) {
                     formResults.removeClass().addClass('alert alert-danger').html(results.errors);
                 } else if (results.success) {
@@ -78,7 +80,12 @@ $(function () {
                 }
 
                 if (results.redirectTo) {
-                    window.location.href = results.redirectTo;
+                    // window.location.href = results.redirectTo;
+                    // console.log(results.redirectTo);
+
+                    setTimeout(() => { // Arrow Function Syntax
+                        window.location.href = results.redirectTo;
+                    }, 2000);
                 }
             },
             cache: false,

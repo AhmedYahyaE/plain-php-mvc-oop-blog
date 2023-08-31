@@ -20,7 +20,7 @@
             </div>
             <div class="form-group">
                 <div class=" col-sm-offset-3 col-sm-9">
-                    <button class="button bold submit-btn">Sign Up</button>
+                    <button class="button bold submit-btn">Login</button>
                  </div>
             </div>
         </form>
