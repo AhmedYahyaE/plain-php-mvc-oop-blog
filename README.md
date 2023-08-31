@@ -57,7 +57,7 @@ All the application routes are defined in the [Application Routes](App/index.php
 
 5- In your browser, go to http://127.0.0.1/blog/ (**Frontend**) and http://127.0.0.1/blog/admin or http://127.0.0.1/blog/admin/login (**Admin Panel**). N.B. All the application routes are defined in the [Application Routes](App/index.php) file.
 
-6- Here are the ready-to-use registered user account credentials you can readily use is (for both **Frontend** and **Admin Panel**):
+6- Here are the ready-to-use registered user account credentials you can readily use (for both **Frontend** and **Admin Panel**):
 
 > **Email**: **ahmed.yahya@gmail.com**, **Password**: **123456**
 
