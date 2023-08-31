@@ -40,12 +40,19 @@ class Request
             list($requestUri, $queryString) = explode('?' , $requestUri);
         }
 
+        // Solve the issue that happens when the root directory of the web server is inside the the project root directory, where this causes a problem with next/following Regular Expression as the \ is wrongly considered as an escape character! This clearly happens when using PHP built-in web server as the root directory of it is inside the project's main directory
+        // if ($script == '\\') {
+        //     $script = '\\\\';
+        // }
+
         $this->url = rtrim(preg_replace('#^'.$script.'#', '' , $requestUri), '/');
 
         if (! $this->url) {
             $this->url = '/';
         }
 
+        // Note: If you have the problem that all your project links in HTML (like CSS, JavaScript, libraries, images, …etc) work well when served by Apache but they don't work (get broken) when served using PHP built-in web server, this is probably because of that     $_SERVER['REQUEST_SCHEME']     doesn't exist! i.e. the     ['REQUEST_SCHEME']     array key doesn't exist in the     $_SERVER     Superglobal array when using the PHP built-in web server, but it exists when using Apache web server. And this, in turn, leads to that HTML treats your project links as 'relative' links and not 'absolute' links which leads to repititive/repeating the base URL i.e. ://localhost:8000/://localhost:8000/://localhost:8000/ endless times and ultimately getting your links broken. We have to account for this using an if condition (ternary operator)
+        // $this->baseUrl = ($this->server('REQUEST_SCHEME') == null ? 'http' : $this->server('REQUEST_SCHEME')) . '://' . $this->server('HTTP_HOST') . $script . '/';
         $this->baseUrl = $this->server('REQUEST_SCHEME') . '://' . $this->server('HTTP_HOST') . $script . '/';
     }
 
