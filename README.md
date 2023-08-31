@@ -32,7 +32,11 @@ Frontend technologies used: jQuery, JavaScript, AJAX and Bootstrap (Responsive D
 
 11- File Upload.
 
-12- Responsive / Mobile first Design.
+12- Using .htaccess Apache configuration file.
+
+13- Regular Expression.
+
+14- Responsive / Mobile first Design.
 
 ## Application URLs:
 1- **Frontend**: The public-facing website can be accessed at https://www.your-domain-example.com/. This is where regular customers/users/members can view/read blog posts, add posts, comment on them, and interact with the website, .... The frontend URL is typically accessible to all visitors of the website. Replace https://www.your-domain-example.com/ with the actual domain name or localhost address where you have deployed the application.
@@ -49,9 +53,9 @@ All the application routes are defined in the [Application Routes](App/index.php
 
 3- Navigate to the database connection configuration file in '**`config.php`**' file and configure/edit/update the file with your MySQL database credentials and other configuration settings.
 
-4- Navigate to the project root directory by using the **`cd`** terminal command, and then start your PHP built-in Development Web Server by running the command: **`php -S localhost:8000`**.
+4- Note: ***Apache*** Web Server must be used to serve this project in order for the application routing system and '***.htaccess***' file to work properly! Place the project inside your *'**htdocs***' folder.
 
-5- In your browser, go to http://localhost:8000/ (**Frontend**) and http://localhost:8000/admin or http://localhost:8000/admin/login (**Admin Panel**). N.B. All the application routes are defined in the [Application Routes](App/index.php) file.
+5- In your browser, go to http://127.0.0.1/blog/ (**Frontend**) and http://127.0.0.1/blog/admin or http://127.0.0.1/blog/admin/login (**Admin Panel**). N.B. All the application routes are defined in the [Application Routes](App/index.php) file.
 
 6- Here are the ready-to-use registered user account credentials you can readily use is (for both **Frontend** and **Admin Panel**):
 
